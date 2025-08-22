@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter for Afsi</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fbe9e7;
+      font-family: 'Georgia', serif;
+    }
+    .envelope {
+      position: relative;
+      width: 320px;
+      height: 220px;
+      background: #f06292;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      overflow: visible; /* allow letter to go outside */
+    }
+    .envelope:before, .envelope:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+    }
+    .envelope:before {
+      top: 0;
+      border-bottom: 110px solid #ec407a;
+    }
+    .envelope:after {
+      bottom: 0;
+      border-top: 110px solid #e91e63;
+    }
+    .paper {
+      position: absolute;
+      top: -400px; /* keep hidden above */
+      left: 50%;
+      transform: translateX(-50%) translateY(100%) scaleY(0);
+      width: 280px;
+      height: 380px;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      overflow-y: auto;
+      line-height: 1.6;
+      font-size: 16px;
+      transition: transform 1s ease;
+      transform-origin: top;
+      white-space: pre-line;
+      z-index: 10; /* show above envelope */
+      border-radius: 6px;
+    }
+    .open .paper {
+      transform: translateX(-50%) translateY(0) scaleY(1);
+    }
+    h2 {
+      text-align: center;
+      color: #d81b60;
+    }
+    .shayari {
+      font-style: italic;
+      color: #555;
+      margin: 10px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" onclick="this.classList.toggle('open')">
+    <div class="paper">
+      <h2>💌 Meri pyaari afsii</h2>
+      <b>(Dil ka Izhaar)</b><br>
+      Meri Afsi,
+      Jab se tum meri zindagi mein aayi ho, sab kuch ekdum badal gaya hai.
+      Jaise andheri raat mein achanak se chand nikal aaye…
+      Mujhe lagta hai main adhoora tha aur tumne aake mujhe poora kar diya.
+      
+      <div class="shayari">"Tere bina zindagi ka khayal bhi adhura sa lagta hai,<br>
+      Tu saath ho toh har dard bhi chhoti si baat lagta hai."</div>
+
+      <b>(Rishta aur Ehsaas)</b><br>
+      Afsi,
+      Tum meri duaon ka sabse khoobsurat jawab ho.
+      Main chahta hoon ki chahe duniya jitni bhi badal jaaye, tum meri zindagi ka hissa hamesha bano.
+      Tumhari muskaan hi meri rooh ki tasalli hai, aur tumhari baatein meri subah ka noor.
+
+      <div class="shayari">"Woh khushi ho tum jo mere dil ko sukoon deti hai,<br>
+      Woh dua ho tum jo Rab se har roz maangta hoon."</div>
+
+      <b>(Hamesha Saath)</b><br>
+      Afsi,
+      Main tumse sirf aaj nahi, kal nahi… hamesha pyaar karta rahunga.
+      Chahe jitne din, jitne saal guzar jaayein, tum meri mohabbat ka pehla aur aakhri kissa rahogi.
+      Tum meri dua, tum meri duniya, tum meri Afsi ho — aur hamesha meri hi rahogi.
+
+      <div class="shayari">"Main khud ko bhool jaaun, par tujhe kabhi nahi,<br>
+      Meri duniya ka sabse khoobsurat hissa ho tum, Afsi meri."</div>
+    </div>
+  </div>
+</body>
+</html>
